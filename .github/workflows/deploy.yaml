@@ -42,6 +42,6 @@ jobs:
           key: ${{ secrets.EC2_KEY }}
           script: |
             sudo rm -rf /usr/share/nginx/html/*
-            sudo cp -r /tmp/angular-deploy/* /usr/share/nginx/html/
+            sudo cp -r /dist/my-first-app/browser/* /usr/share/nginx/html/
             sudo chown -R nginx:nginx /usr/share/nginx/html
             sudo systemctl restart nginx
